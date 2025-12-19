@@ -1,0 +1,11 @@
+[package]
+name = "fpga_core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rhdl = { git = "https://github.com/Pfat8EqualsD/rhdl.git", branch = "signal" }
+rhdl-bits = { git = "https://github.com/Pfat8EqualsD/rhdl.git", branch = "signal" }
+rhdl-fpga = { git = "https://github.com/Pfat8EqualsD/rhdl.git", branch = "signal" }
+
+anyhow = "1.0"   # Pentru gestionarea erorilor (văzut în lock file)

@@ -1,0 +1,8 @@
+[package]
+name = "host_software"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+nalgebra = "0.32"   # Pentru calcule vectoriale și cuaternioni
+fpga_core = { path = "../fpga_core" } # Așa legi software-ul de hardware

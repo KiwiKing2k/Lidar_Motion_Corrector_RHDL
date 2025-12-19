@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "host_software",
+    "fpga_core"
+]
+resolver = "2"
