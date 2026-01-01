@@ -4,12 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Pentru citirea CSV-urilor
 csv = "1.3"
 serde = { version = "1.0", features = ["derive"] }
-
 # Pentru matematica 3D (Vectori, Cuaternioni)
 nalgebra = "0.32"
+rhdl = { git = "https://github.com/Pfat8EqualsD/rhdl", branch = "main" }
+rhdl-fpga = { git = "https://github.com/Pfat8EqualsD/rhdl", branch = "main" }
 
-# Legătura cu biblioteca hardware (chiar dacă nu o folosim intens încă)
 fpga_core = { path = "../fpga_core" }
