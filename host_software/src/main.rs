@@ -45,9 +45,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let t_start = scan_points.first().unwrap().timestamp_ns;
     let t_end = scan_points.last().unwrap().timestamp_ns;
 
-    println!("Scanare LiDAR Validă: {} puncte", scan_points.len());
+    println!("Scanare LiDAR Valida: {} puncte", scan_points.len());
     println!("Interval Scanare: {} -> {}", t_start, t_end);
-    println!("Timp Încărcare Total: {:.2?}", start_load.elapsed());
+    println!("Timp Incarcare Total: {:.2?}", start_load.elapsed());
 
     // 3. filtram IMU-ul pentru acest interval cu margine de eroare
     let margin_ns = 5_000_000; // 5ms
@@ -66,7 +66,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let trajectory = lut_gen::calculate_trajectory(&relevant_imu);
     let pose_lut = lut_gen::generate_pose_lut(&trajectory);
 
-    println!("Pose-LUT generat: {} intrări", pose_lut.len());
+    println!("Pose-LUT generat: {} intrari", pose_lut.len());
 
     // 5. testare + Simulare
     let mut matched = 0;
@@ -148,10 +148,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             inputs.push(LidarInput::default());
             inputs.push(LidarInput::default());
 
-            // t2: Impuls Date (Incarcare in registre)
+            // t2: Impuls Date
             inputs.push(input_active);
 
-            // t3-t17: Wait/Process (Mentinem datele pe fire in timp ce procesorul calculeaza)
+            // t3-t17: Wait/Process
             for _ in 0..15 {
                 inputs.push(input_hold);
             }
@@ -188,7 +188,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     println!("------------------------------------------------");
-    println!("Procesare Finalizată în {:.2?}", start_time.elapsed());
+    println!("Procesare Finalizata în {:.2?}", start_time.elapsed());
     println!("Puncte Procesate: {} / {}", matched_count, scan_points.len());
     println!("Rezultat salvat în 'data/corrected_cloud.csv'");
     println!("------------------------------------------------");
