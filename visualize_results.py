@@ -4,6 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 # --- CONFIGURARE ---
+#valorile sunt alese din coloana 'timestamp_ns' din fisierul raw_lidar.csv
 START_TIME = 1574367378706156049
 END_TIME   = 1574367378806136034
 
