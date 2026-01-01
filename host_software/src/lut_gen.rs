@@ -10,7 +10,7 @@ pub struct Pose {
     pub translation: Vector3<f64>,
 }
 
-// 1. Calcularea traiectoriei ca vector continuu din datele IMU
+// 1. calcularea traiectoriei ca vector continuu din datele IMU
 pub fn calculate_trajectory(imu_data: &[ImuMeasurement]) -> Vec<Pose> {
     let mut trajectory = Vec::new();
 

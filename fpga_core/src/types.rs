@@ -32,6 +32,7 @@ pub struct LidarInput {
 
 #[derive(PartialEq, Debug, Digital, Default)]
 pub struct LidarOutput {
+    // sunt date valide pentru output
     pub valid: bool,
     pub corrected_point: Vector3,
 }
