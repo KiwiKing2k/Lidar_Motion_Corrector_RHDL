@@ -507,6 +507,8 @@ dependencies = [
  "csv",
  "fpga_core",
  "nalgebra",
+ "rhdl",
+ "rhdl-fpga",
  "serde",
 ]
 
